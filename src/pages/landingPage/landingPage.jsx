@@ -7,8 +7,8 @@ export class LandingPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            bill: 0,
-            customTip: 0,
+            bill: '',
+            customTip: '',
             persons: 1,
             totalTip: '₹' + 0,
             totalAmount: '₹' + 0
@@ -43,6 +43,16 @@ export class LandingPage extends Component {
             totalAmount: total
         })
     }
+
+    reset = (e) => {
+        this.setState({
+            bill:'',
+            persons: 1,
+            totalTip: '₹' + 0,
+            totalAmount: '₹' + 0,
+            customTip:''
+        })
+    }
     render() {
         console.log(this.state.totalTip)
         return (
@@ -54,7 +64,7 @@ export class LandingPage extends Component {
                             <span className="input-title">BILL</span>
                             <div className='input-grp'>
                                 <span className='inr'>₹</span>
-                                <input className='input-field' name='bill' autoComplete='off' onChange={this.handleChange}></input>
+                                <input className='input-field' name='bill' value={this.state.bill} autoComplete='off' onChange={this.handleChange}></input>
                             </div>
                             <span className="input-title">NUMBER OF PEOPLE</span>
                             <div className='input-grp'>
@@ -71,7 +81,7 @@ export class LandingPage extends Component {
                                 <div className='btn-grp2'>
                                     <button className='tip-btn1' name='tipBtn' value={25} onClick={this.handleClick}>25%</button>
                                     <button className='tip-btn' name='tipBtn' value={50} onClick={this.handleClick}>50%</button>
-                                    <input className='tip-btn2' name='customTip' placeholder='CUSTOM' onChangeCapture={this.handleChange}></input>
+                                    <input className='tip-btn2' name='customTip' value={this.state.customTip} placeholder='CUSTOM' onChangeCapture={this.handleChange}></input>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +95,7 @@ export class LandingPage extends Component {
                             <label className='tip-heading'>Total<br /><span className='tip-span'>/ person</span></label>
                             <input type="text" className='tip-count' value={this.state.totalAmount} disabled />
                         </div>
-                        <button className='btn-reset'>RESET</button>
+                        <button className='btn-reset' onClick={this.reset}>RESET</button>
                     </div>
                 </div>
             </div>

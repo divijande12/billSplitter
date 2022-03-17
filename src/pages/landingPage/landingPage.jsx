@@ -1,7 +1,5 @@
-import CryptoJs from 'crypto-js'
 import React, { Component } from 'react'
 import './landingPage.css'
-import AES from 'crypto-js/aes'
 
 export class LandingPage extends Component {
     constructor(props) {
@@ -38,19 +36,19 @@ export class LandingPage extends Component {
         let tip = this.state.bill * (e.target.value / 100)
         let total = (parseInt(this.state.bill) + tip) / this.state.persons
         this.setState({
-            totalTip: tip,
+            totalTip: '₹' + tip,
             customTip: '',
-            totalAmount: total
+            totalAmount: '₹' + total
         })
     }
 
     reset = (e) => {
         this.setState({
-            bill:'',
+            bill: '',
             persons: 1,
             totalTip: '₹' + 0,
             totalAmount: '₹' + 0,
-            customTip:''
+            customTip: ''
         })
     }
     render() {
@@ -88,7 +86,7 @@ export class LandingPage extends Component {
                     </div>
                     <div className='card-dark'>
                         <div className='tip-display'>
-                            <label className='tip-heading'>Tip Amount<br /><span className='tip-span'>/ person</span></label>
+                            <label className='tip-heading'>Tip Amount<br /></label>
                             <input type="text" className='tip-count' value={this.state.totalTip} disabled />
                         </div>
                         <div className='tip-display2'>

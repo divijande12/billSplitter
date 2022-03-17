@@ -82,7 +82,7 @@
     opacity: 80%;
     font-family: "Space Mono", monospace;
 }
-.inr{
+.inr {
     font-size: 28px;
     padding-left: 10px;
     color: hsl(183, 100%, 15%);
@@ -121,16 +121,16 @@
     font-family: "Space Mono", monospace;
     font-size: 18px;
 }
-.tip-btn:focus{
+.tip-btn:focus {
     background-color: hsl(172, 67%, 45%);
 }
-.tip-btn1:focus{
+.tip-btn1:focus {
     background-color: hsl(172, 67%, 45%);
 }
-.tip-btn:hover{
+.tip-btn:hover {
     background-color: hsl(172, 67%, 45%);
 }
-.tip-btn1:hover{
+.tip-btn1:hover {
     background-color: hsl(172, 67%, 45%);
 }
 .tip-btn1 {
@@ -156,8 +156,8 @@
     outline: none;
     opacity: 80%;
 }
-.user{
-    background-image: url('../../icon-person.svg');
+.user {
+    background-image: url("../../icon-person.svg");
     height: 20px;
     width: 20px;
     background-repeat: no-repeat;
@@ -165,41 +165,43 @@
     margin-top: 8px;
     margin-left: 10px;
 }
-.tip-display{
+.tip-display {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     margin: 45px auto;
 }
-.tip-display2{
+.tip-display2 {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-top: -25px ;
+    margin-top: -25px;
 }
-.tip-heading{
+.tip-heading {
     color: white;
     display: flex;
     flex-direction: column;
     font-family: "Space Mono", monospace;
 }
-.tip-span{
+.tip-span {
     color: hsl(184, 14%, 45%);
     font-family: "Space Mono", monospace;
 }
-.tip-count{
+.tip-count {
     background-color: hsl(183, 100%, 15%);
     color: hsl(172, 67%, 45%);
     border: none;
     font-size: 40px;
     font-weight: 500;
     letter-spacing: 3px;
-    width: 150px;
+    width: 230px;
     font-family: "Space Mono", monospace;
+    word-wrap: break-word;
+    flex-wrap: wrap;
 }
-.btn-reset{
+.btn-reset {
     width: 75%;
     height: 40px;
     border: none;
@@ -209,4 +211,893 @@
     font-weight: bold;
     background-color: hsl(172, 67%, 45%);
     margin: 65px 50px 0px;
+}
+
+/* responsive for mobile */
+
+@media only screen and (max-width: 576px) {
+    #root {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: hsl(185, 41%, 84%);
+        background-size: cover;
+        width: 100%;
+        overflow-y: hidden;
+    }
+    .container {
+        background-color: hsl(185, 41%, 84%);
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        padding-bottom: 30px;
+    }
+    .brand-header {
+        font-size: 28px;
+        font-family: "Space Mono", monospace;
+        letter-spacing: 5px;
+        line-height: 2.5rem;
+        font-weight: 600;
+        color: hsl(184, 14%, 56%);
+        margin: 50px auto;
+    }
+    .card-container {
+        background-color: white;
+        width: 100%;
+        margin: -10px auto;
+        height: auto;
+        border-radius: 25px;
+        display: block;
+        box-shadow: 5px 5px 30px slategray;
+    }
+    .card-light {
+        width: 100%;
+        height: 380px;
+        border-radius: 25px;
+        /* opacity: 0; */
+        /* background-color: aqua; */
+    }
+    .card-dark {
+        background-color: hsl(183, 100%, 15%);
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+        padding: 15px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-grps {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-grp1 {
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .btn-grp2 {
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .tip-btn {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: none;
+        border-radius: 7px;
+        background-color: hsl(183, 100%, 15%);
+        color: whitesmoke;
+        margin-left: 20px;
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+    }
+    .tip-btn:focus {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1:focus {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn:hover {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1:hover {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1 {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: none;
+        border-radius: 7px;
+        background-color: hsl(183, 100%, 15%);
+        color: whitesmoke;
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+    }
+    .tip-btn2 {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: 1px solid hsl(183, 100%, 15%);
+        border-radius: 7px;
+        background-color: hsl(189, 41%, 97%);
+        margin-left: 20px;
+        padding: 15px;
+        font-family: "Space Mono", monospace;
+        font-size: 14px;
+        outline: none;
+        opacity: 80%;
+    }
+    .user {
+        background-image: url("../../icon-person.svg");
+        height: 20px;
+        width: 20px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+    .tip-display {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin: 10px;
+    }
+    .tip-display2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 10px;
+    }
+    .tip-heading {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        font-family: "Space Mono", monospace;
+    }
+    .tip-span {
+        color: hsl(184, 14%, 45%);
+        font-family: "Space Mono", monospace;
+    }
+    .tip-count {
+        background-color: hsl(183, 100%, 15%);
+        /* background-color: white; */
+        color: hsl(172, 67%, 45%);
+        border: none;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        width: 100%;
+        margin-top: 20px;
+        font-family: "Space Mono", monospace;
+    }
+    .btn-reset {
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 18px;
+        font-weight: bold;
+        background-color: hsl(172, 67%, 45%);
+        margin: 10px 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #root {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: hsl(185, 41%, 84%);
+        background-size: cover;
+        width: 100%;
+        overflow-y: hidden;
+    }
+    .container {
+        background-color: hsl(185, 41%, 84%);
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        padding-bottom: 30px;
+    }
+    .brand-header {
+        font-size: 28px;
+        font-family: "Space Mono", monospace;
+        letter-spacing: 5px;
+        line-height: 2.5rem;
+        font-weight: 600;
+        color: hsl(184, 14%, 56%);
+        margin: 50px auto;
+    }
+    .card-container {
+        background-color: white;
+        width: 100%;
+        margin: -10px auto;
+        height: auto;
+        border-radius: 25px;
+        display: block;
+        box-shadow: 5px 5px 30px slategray;
+    }
+    .card-light {
+        width: 100%;
+        height: 380px;
+        border-radius: 25px;
+        /* opacity: 0; */
+        /* background-color: aqua; */
+    }
+    .card-dark {
+        background-color: hsl(183, 100%, 15%);
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+        padding: 15px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-grps {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-grp1 {
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .btn-grp2 {
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .tip-btn {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: none;
+        border-radius: 7px;
+        background-color: hsl(183, 100%, 15%);
+        color: whitesmoke;
+        margin-left: 20px;
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+    }
+    .tip-btn:focus {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1:focus {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn:hover {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1:hover {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1 {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: none;
+        border-radius: 7px;
+        background-color: hsl(183, 100%, 15%);
+        color: whitesmoke;
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+    }
+    .tip-btn2 {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: 1px solid hsl(183, 100%, 15%);
+        border-radius: 7px;
+        background-color: hsl(189, 41%, 97%);
+        margin-left: 20px;
+        padding: 15px;
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+        outline: none;
+        opacity: 80%;
+    }
+    .user {
+        background-image: url("../../icon-person.svg");
+        height: 20px;
+        width: 20px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+    .tip-display {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin: 10px;
+    }
+    .tip-display2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 10px;
+    }
+    .tip-heading {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        font-family: "Space Mono", monospace;
+    }
+    .tip-span {
+        color: hsl(184, 14%, 45%);
+        font-family: "Space Mono", monospace;
+    }
+    .tip-count {
+        background-color: hsl(183, 100%, 15%);
+        /* background-color: white; */
+        color: hsl(172, 67%, 45%);
+        border: none;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        width: 100%;
+        margin-top: 20px;
+        font-family: "Space Mono", monospace;
+    }
+    .btn-reset {
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 18px;
+        font-weight: bold;
+        background-color: hsl(172, 67%, 45%);
+        margin: 10px 10px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    #root {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: hsl(185, 41%, 84%);
+        background-size: cover;
+        width: 100%;
+        overflow-y: hidden;
+    }
+    .container {
+        background-color: hsl(185, 41%, 84%);
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        padding-bottom: 30px;
+    }
+    .brand-header {
+        font-size: 28px;
+        font-family: "Space Mono", monospace;
+        letter-spacing: 5px;
+        line-height: 2.5rem;
+        font-weight: 600;
+        color: hsl(184, 14%, 56%);
+        margin: 50px auto;
+    }
+    .card-container {
+        background-color: white;
+        width: 100%;
+        margin: -10px auto;
+        height: auto;
+        border-radius: 25px;
+        display: block;
+        box-shadow: 5px 5px 30px slategray;
+    }
+    .card-light {
+        width: 100%;
+        height: 380px;
+        border-radius: 25px;
+        /* opacity: 0; */
+        /* background-color: aqua; */
+    }
+    .card-dark {
+        background-color: hsl(183, 100%, 15%);
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+        padding: 15px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .btn-grps {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-grp1 {
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .btn-grp2 {
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .tip-btn {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: none;
+        border-radius: 7px;
+        background-color: hsl(183, 100%, 15%);
+        color: whitesmoke;
+        margin-left: 20px;
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+    }
+    .tip-btn:focus {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1:focus {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn:hover {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1:hover {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1 {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: none;
+        border-radius: 7px;
+        background-color: hsl(183, 100%, 15%);
+        color: whitesmoke;
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+    }
+    .tip-btn2 {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: 1px solid hsl(183, 100%, 15%);
+        border-radius: 7px;
+        background-color: hsl(189, 41%, 97%);
+        margin-left: 20px;
+        padding: 15px;
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+        outline: none;
+        opacity: 80%;
+    }
+    .user {
+        background-image: url("../../icon-person.svg");
+        height: 20px;
+        width: 20px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+    .tip-display {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin: 10px;
+    }
+    .tip-display2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 10px;
+    }
+    .tip-heading {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        font-family: "Space Mono", monospace;
+    }
+    .tip-span {
+        color: hsl(184, 14%, 45%);
+        font-family: "Space Mono", monospace;
+    }
+    .tip-count {
+        background-color: hsl(183, 100%, 15%);
+        /* background-color: white; */
+        color: hsl(172, 67%, 45%);
+        border: none;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        width: 100%;
+        margin-top: 20px;
+        font-family: "Space Mono", monospace;
+    }
+    .btn-reset {
+        width: 98%;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 18px;
+        font-weight: bold;
+        background-color: hsl(172, 67%, 45%);
+        margin: 10px 10px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    #root {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: hsl(185, 41%, 84%);
+        background-size: cover;
+        width: 100%;
+        overflow-y: hidden;
+    }
+    .container {
+        background-color: hsl(185, 41%, 84%);
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        padding-bottom: 30px;
+    }
+    .brand-header {
+        font-size: 28px;
+        font-family: "Space Mono", monospace;
+        letter-spacing: 5px;
+        line-height: 2.5rem;
+        font-weight: 600;
+        color: hsl(184, 14%, 56%);
+        margin: 50px auto;
+    }
+    .card-container {
+        background-color: white;
+        width: 100%;
+        margin: -10px auto;
+        height: auto;
+        border-radius: 25px;
+        display: block;
+        box-shadow: 5px 5px 30px slategray;
+    }
+    .card-light {
+        width: 100%;
+        height: 380px;
+        border-radius: 25px;
+        /* opacity: 0; */
+        /* background-color: aqua; */
+    }
+    .card-dark {
+        background-color: hsl(183, 100%, 15%);
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+        padding: 15px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .btn-grps {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-grp1 {
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .btn-grp2 {
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .tip-btn {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: none;
+        border-radius: 7px;
+        background-color: hsl(183, 100%, 15%);
+        color: whitesmoke;
+        margin-left: 20px;
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+    }
+    .tip-btn:focus {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1:focus {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn:hover {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1:hover {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1 {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: none;
+        border-radius: 7px;
+        background-color: hsl(183, 100%, 15%);
+        color: whitesmoke;
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+    }
+    .tip-btn2 {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: 1px solid hsl(183, 100%, 15%);
+        border-radius: 7px;
+        background-color: hsl(189, 41%, 97%);
+        margin-left: 20px;
+        padding: 15px;
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+        outline: none;
+        opacity: 80%;
+    }
+    .user {
+        background-image: url("../../icon-person.svg");
+        height: 20px;
+        width: 20px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+    .tip-display {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin: 10px;
+    }
+    .tip-display2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 10px;
+    }
+    .tip-heading {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        font-family: "Space Mono", monospace;
+    }
+    .tip-span {
+        color: hsl(184, 14%, 45%);
+        font-family: "Space Mono", monospace;
+    }
+    .tip-count {
+        background-color: hsl(183, 100%, 15%);
+        /* background-color: white; */
+        color: hsl(172, 67%, 45%);
+        border: none;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        width: 100%;
+        margin-top: 20px;
+        font-family: "Space Mono", monospace;
+    }
+    .btn-reset {
+        width: 98%;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 18px;
+        font-weight: bold;
+        background-color: hsl(172, 67%, 45%);
+        margin: 10px 10px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    #root {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: hsl(185, 41%, 84%);
+        background-size: cover;
+        width: 100%;
+        overflow-y: hidden;
+    }
+    .container {
+        background-color: hsl(185, 41%, 84%);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .brand-header {
+        font-size: 28px;
+        font-family: "Space Mono", monospace;
+        letter-spacing: 5px;
+        line-height: 2.5rem;
+        font-weight: 600;
+        color: hsl(184, 14%, 56%);
+        margin: 50px auto;
+    }
+    .card-container {
+        background-color: white;
+        width: 100%;
+        height: 400px;
+        margin: 10px auto;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 5px 5px 30px slategray;
+    }
+    .card-light {
+        width: 100%;
+        height: 380px;
+        border-radius: 25px;
+        /* opacity: 0; */
+        /* background-color: aqua; */
+    }
+    .card-dark {
+        background-color: hsl(183, 100%, 15%);
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        padding: 15px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .btn-grps {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-grp1 {
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .btn-grp2 {
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .tip-btn {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: none;
+        border-radius: 7px;
+        background-color: hsl(183, 100%, 15%);
+        color: whitesmoke;
+        margin-left: 20px;
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+    }
+    .tip-btn:focus {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1:focus {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn:hover {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1:hover {
+        background-color: hsl(172, 67%, 45%);
+    }
+    .tip-btn1 {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: none;
+        border-radius: 7px;
+        background-color: hsl(183, 100%, 15%);
+        color: whitesmoke;
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+    }
+    .tip-btn2 {
+        max-width: 200px;
+        min-width: 70px;
+        height: 50px;
+        border: 1px solid hsl(183, 100%, 15%);
+        border-radius: 7px;
+        background-color: hsl(189, 41%, 97%);
+        margin-left: 20px;
+        padding: 15px;
+        font-family: "Space Mono", monospace;
+        font-size: 18px;
+        outline: none;
+        opacity: 80%;
+    }
+    .user {
+        background-image: url("../../icon-person.svg");
+        height: 20px;
+        width: 20px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+    .tip-display {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: -30px;
+        width: 100%;
+        /* background-color: white; */
+    }
+    .tip-display2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 40px;
+        width: 100%;
+    }
+    .tip-heading {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        font-family: "Space Mono", monospace;
+    }
+    .tip-span {
+        color: hsl(184, 14%, 45%);
+        font-family: "Space Mono", monospace;
+    }
+    .tip-count {
+        background-color: hsl(183, 100%, 15%);
+        /* background-color: white; */
+        color: hsl(172, 67%, 45%);
+        border: none;
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        width: 50%;
+        margin-top: 0px;
+        font-family: "Space Mono", monospace;
+    }
+    .btn-reset {
+        width: 98%;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 18px;
+        font-weight: bold;
+        background-color: hsl(172, 67%, 45%);
+        margin: 50px 15px 0px 10px
+    }
 }
